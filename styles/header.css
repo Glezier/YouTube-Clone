@@ -1,0 +1,160 @@
+.header{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 55px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 55px;
+    background-color: white;
+    border-bottom-color: rgb(230,230,230);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    z-index: 1;
+}
+
+.top-left{
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    height: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.logo{
+    height: 20px;
+}
+
+.menu:hover,
+.logo:hover{
+    cursor: pointer;
+}
+
+.top-middle{
+    display: flex;
+    flex: 1;
+    max-width: 500px;
+    margin-left: 70px;
+    margin-right: 30px;
+    align-items: center;
+}
+
+.search{
+    display: flex;
+    height: 36px;
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(195, 195, 195);    
+    padding-left: 10px;    
+    flex: 1;
+    margin-right: 0;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.search::placeholder{
+    font-size: 16px;
+}
+
+.search:focus {
+    border-color: blue;
+    outline: none; 
+}
+
+.glass{
+    border-color:  rgb(195, 195, 195); 
+    border-width: 1px;
+    border-style: solid;
+    height: 39px;
+    width: 60px;  
+}
+
+.glass-image{
+    height: 22px;
+}
+
+.microphone{
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    margin-left: 12px;
+    background-color: rgb(245, 245, 245);
+}
+
+.microphone-image{
+    height: 24px;
+}
+
+.top-right{
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 180px;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.icons-container:hover{
+    cursor: pointer;
+}
+
+.size-icon-right{
+    height: 24px;
+}
+
+.count{
+    position: absolute;
+    border-radius: 10px;
+    top: -2px;
+    right: -5px;
+    background-color: rgb(200, 0, 0);
+    color: white;
+    font-size: 11px;
+    padding: 2px 5px;
+}
+
+.account-img{
+    height: 32px;
+    border-radius: 20px;
+}
+
+.glass,
+.microphone,
+.icons-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass .tooltip,
+.microphone .tooltip,
+.icons-container .tooltip{
+    position: absolute;
+    opacity: 0;
+    background-color: gray;
+    color: white;
+    font-size: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 2px;
+    transition: opacity 0.15s;
+    bottom: -30px;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.glass:hover .tooltip,
+.microphone:hover .tooltip,
+.icons-container:hover .tooltip{
+    opacity: 1;
+}
